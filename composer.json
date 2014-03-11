@@ -1,0 +1,23 @@
+{
+    "name": "devdojo/behance",
+    "description": "",
+    "authors": [
+        {
+            "name": "devdojo",
+            "email": "tony@devdojo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Devdojo\\Behance\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
