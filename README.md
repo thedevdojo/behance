@@ -15,22 +15,22 @@ Next, update Composer from the Terminal:
 
     composer update
 
-Once this operation completes, the final step is to add the service provider. Open `app/config/app.php`, and add a new item to the providers array.
+Once this operation completes, you'll need to add the service provider. Open `app/config/app.php`, and add a new item to the providers array.
 
     'Devdojo\Behance\BehanceServiceProvider',
+    
+Finally, you'll need to publish the config file. Add the following command in Terminal.
 
-That's it! You're all set to go.
+    php artisan config:publish devdojo/behance
+
+Then open up `app/config/packages/devdojo/behance/keys.php` and add your Behance Client ID and Client Secret. And that's it! You're all set to go.
 
 ## Usage
 
 Here's an example of how to get the featured projects from behance.
 
 ```php
-$behance = new Behance( $client_id, $client_secret );
-
-$results = $behance->searchProjects();
-
-print_r($results);
+print_r(Behance::searchProjects());
 ```
 
 For further info on using the Behance API, be sure to checkout: https://github.com/behance/network_api_php
