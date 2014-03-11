@@ -26,7 +26,7 @@ That's it! You're all set to go.
 Here's an example of how to get the featured projects from behance.
 
 ```php
-$behance = new Behance( $client_id, $client_secret )	
+$behance = new Behance( $client_id, $client_secret );
 
 $results = $behance->searchProjects();
 
