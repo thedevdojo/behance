@@ -1,4 +1,4 @@
-behance
+Behance API
 =======
 
 Behance API Package for Laravel 4
