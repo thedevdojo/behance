@@ -39,13 +39,13 @@ class Behance {
    *
    * @param bool   $debug: OUTPUTS failures if they occur (non-2xx responses)
    */
-  public function __construct( $client_id, $client_secret, $debug = false ) {
+  public function __construct( $debug = false ) {
 
     if ( !extension_loaded( 'curl' ) )
       throw new Be_Exception( "cURL module is required" );
 
-    $this->_client_id     = $client_id;
-    $this->_client_secret = $client_secret;
+    $this->_client_id     = Config::get('behance::keys.id');
+    $this->_client_secret = Config::get('behance::keys.secret');
     $this->_debug         = $debug;
 
 
