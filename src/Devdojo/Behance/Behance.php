@@ -7,6 +7,8 @@
  * @version  1.0
  */
 
+use Config;
+
 class Behance {
 
   const ENDPOINT_PROJECTS      = '/projects';
